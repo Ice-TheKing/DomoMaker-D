@@ -9,13 +9,13 @@ const loginPage = (req, res) => {
 const getToken = (request, response) => {
   const req = request;
   const res = response;
-  
+
   const csrfJSON = {
     csrfToken: req.csrfToken(),
   };
-  
+
   res.json(csrfJSON);
-}
+};
 
 const logout = (req, res) => {
   req.session.destroy();
